@@ -1,7 +1,7 @@
 <header>
-   <%= image_tag("catolica.jpg", :alt => "Application logo", :class => "round") %>
-  <nav class="round">
-    <ul>
+<%= image_tag("catolica.jpg", :alt => "Application logo", :class => "round") %>
+<nav class="round">
+   <ul>
       <li><%= link_to "Home", home_path %></li>
       <% if signed_in? %>
         <li><%= link_to "#{current_user.name}\'s Profile", current_user %></li>

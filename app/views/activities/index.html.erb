@@ -36,16 +36,19 @@
 
 <%= link_to 'Create your activity !', new_activity_path %> <br>
 
+<h1>Search Activities</h1>
+
 <%= search_form_for @search do |f| %>
   <fieldset>
-    <legend>Activity</legend>
+    <legend>User</legend>
     <ul>
       <li>
         <%= f.label :name_cont %>
         <%= f.text_field :name_cont %>
+      </li>
     </ul>
-    </fieldset>
-    
-    <% end %>
+  </fieldset>
+  <%= f.submit %>
+<% end %>
 
 <%= render 'results' %>

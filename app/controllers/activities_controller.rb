@@ -13,7 +13,7 @@ class ActivitiesController < ApplicationController
     @user = current_user
       
       @search = Activity.search(params[:name])
-      @users  = params[:distinct].to_i.zero? ?
+      @users = params[:distinct].to_i.zero? ?
       @search.result :
       @search.result(distinct: true)
       
